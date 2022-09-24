@@ -1,0 +1,81 @@
+@import "../../styles.scss";
+.main {
+    padding: 20px 0;
+    &Wrapper {
+        @include displayFlex(center, center, column);
+        gap: 30px;
+
+        width: 100%;
+    }
+
+    &Performance {
+        max-width: 800px;
+        width: 100%;
+
+        border: 2px solid grey;
+
+        &--wrapper {
+            @include displayFlex(center, center, column);
+            gap: 20px;
+
+            padding: 15px;
+        }
+    }
+
+    &Title {
+        @include font(var(--SizeText__MediunSubtitle), 700);
+    }
+
+    &Text {
+        @include font(var(--SizeText__Small));
+    }
+}
+
+.decorBlock {
+    @include displayFlex(center, center, column);
+    gap: 15px;
+
+    background-color: var(--Color__BGGrey);
+    width: 100%;
+    padding: 15px 0;
+    text-align: center;
+
+    &Text {
+        @include font(var(--SizeText__Bold), 500);
+    }
+}
+
+.card {
+    &List {
+        @include displayFlex(center, space-evenly);
+        gap: 30px;
+        flex-wrap: wrap;
+
+        max-width: 800px;
+        width: 100%;
+    }
+
+    &Item {
+        @include displayFlex(flex-start, center, column);
+        gap: 15px;
+
+        max-width: 385px;
+        width: 100%;
+
+        padding: 20px;
+
+        border: 2px solid grey;
+    }
+
+    &Title {
+        @include font(var(--SizeText__MediunSubtitle), 700);
+    }
+
+    &Description {
+        @include font(var(--SizeText__Small), 400);
+    }
+
+    &Btn {
+        padding: 8px 45px;
+    }
+}
