@@ -1,0 +1,84 @@
+<section class="main navigatorPageMain">
+    <div class="conteiner">
+        <div class="mainWrapper navigatorPageMainWrapper">
+            <div class="innerBorder">
+                <ul class="tabList">
+                    <li class="tabItem">
+                        <button
+                            class="tabBtn"
+                            type="button"
+                            routerLinkActive="active"
+                            [routerLinkActiveOptions]="{ exact: true }"
+                            [routerLink]="['/navigator']"
+                            [queryParams]="{ tab: '0' }"
+                        >
+                            Income
+                        </button>
+                    </li>
+                    <li class="tabItem">
+                        <button
+                            class="tabBtn"
+                            type="button"
+                            routerLinkActive="active"
+                            [routerLink]="['/navigator']"
+                            [queryParams]="{ tab: '1' }"
+                        >
+                            Outcome
+                        </button>
+                    </li>
+                    <li class="tabItem">
+                        <button
+                            class="tabBtn"
+                            type="button"
+                            routerLinkActive="active"
+                            [routerLink]="['/navigator']"
+                            [queryParams]="{ tab: '2' }"
+                        >
+                            Loads
+                        </button>
+                    </li>
+                    <li class="tabItem">
+                        <button
+                            class="tabBtn"
+                            type="button"
+                            routerLinkActive="active"
+                            [routerLink]="['/navigator']"
+                            [queryParams]="{ tab: '3' }"
+                        >
+                            Investments
+                        </button>
+                    </li>
+                </ul>
+                <table class="navigatorPageTable Table">
+                    <thead class="TableHead">
+                        <tr class="TableHeadTr">
+                            <th class="TableHeadTh" >Name</th>
+                            <th class="TableHeadTh">Acount</th>
+                        </tr>
+                    </thead>
+                    <tbody class="TableBody">
+                        <tr class="TableBodyTr">
+                            <td class="TableBodyTd">Mark Otto</td>
+                            <td class="TableBodyTd">12</td>
+                        </tr>
+                        <tr class="TableBodyTr">
+                            <td class="TableBodyTd">Jacod Throton</td>
+                            <td class="TableBodyTd">21</td>
+                        </tr>
+                        <tr class="TableBodyTr">
+                            <td class="TableBodyTd">Michail Timoch</td>
+                            <td class="TableBodyTd">98999999</td>
+                        </tr>
+                        <tr class="TableBodyTr">
+                            <td class="TableBodyTd">Nikita Karatheviasd</td>
+                            <td class="TableBodyTd">9899999912</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <button class="btnStandart btnMain" type="submit" routerLink="/">
+                Go to home
+            </button>
+        </div>
+    </div>
+</section>

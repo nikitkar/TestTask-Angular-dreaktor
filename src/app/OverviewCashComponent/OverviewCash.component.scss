@@ -1,0 +1,98 @@
+@import "../../styles.scss";
+
+.navigatorPage {
+    &Main {
+        &Wrapper {
+            @include displayFlex(center, center, column);
+            gap: 20px;
+        }
+    }
+}
+
+.innerBorder{
+    @include displayFlex(center, center, column);
+
+    max-width: 392px;
+    margin: 0 auto;
+
+    padding-bottom: 20px;
+
+    border: 2px solid black;
+
+    border-radius: 15px;
+}
+
+.Table {
+    --widthTr: 100%;
+    --widthTh: 60%;
+    --widthTd: var(--widthTh);
+
+
+    display: table;
+    padding: 0 20px;
+    width: 100%;
+
+    border-collapse: collapse;
+
+    margin-top: 20px;
+
+    &Head {
+        display: inherit;
+        width: 100%;
+        &Tr {
+            display: inherit;
+            width: var(--widthTr);
+            border-bottom: 1px solid black;
+        }
+
+        &Th {
+            padding: 8px;
+            width: var(--widthTh);
+            text-align: center;
+        }
+    }
+
+    &Body {
+        display: inherit;
+        width: 100%;
+        &Tr {
+            display: inherit;
+            width: var(--widthTr);
+            border-bottom: 1px solid black;
+            border-collapse: separate;
+        }
+
+        &Tr:last-child {
+            border: none;
+        }
+
+        &Td {
+            padding: 8px;
+            width: var(--widthTd);
+            text-align: center;
+        }
+    }
+}
+
+.tab {
+    &List {
+        @include displayFlex(center, center);
+        flex-wrap: nowrap;
+    }
+
+    &Item {
+        width: 100%;
+    }
+
+    &Btn {
+        border-radius: 10px 10px 0 0;
+        border: 3px solid black;
+
+        padding: 8px 15px;
+        color: var(--Color__Black);
+    }
+}
+
+.active {
+    background-color: grey;
+}
