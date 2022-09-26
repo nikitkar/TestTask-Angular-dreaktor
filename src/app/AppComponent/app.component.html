@@ -19,14 +19,14 @@
                 </div>
                 <div class="decorBlock">
                     <p class="decorBlockText">
-                        You have <span>100</span> transactions
+                        You have <span>{{countRecordInJson}}</span> transactions
                     </p>
                 </div>
             </div>
 
             <ul class="cardList">
                 <li class="cardItem">
-                    <h3 class="cardTitle">123</h3>
+                    <h3 class="cardTitle">{{countIncomeType}}</h3>
                     <p class="cardDescription">Income</p>
                     <button
                         class="btnStandart cardBtn"
@@ -38,8 +38,8 @@
                     </button>
                 </li>
                 <li class="cardItem">
-                    <h3 class="cardTitle">123</h3>
-                    <p class="cardDescription">Income</p>
+                    <h3 class="cardTitle">{{countoutcomeUserType}}</h3>
+                    <p class="cardDescription">Outcome</p>
                     <button
                         class="btnStandart cardBtn"
                         type="submit"
@@ -50,8 +50,8 @@
                     </button>
                 </li>
                 <li class="cardItem">
-                    <h3 class="cardTitle">123</h3>
-                    <p class="cardDescription">Income</p>
+                    <h3 class="cardTitle">{{countloanUserType}}</h3>
+                    <p class="cardDescription">Loan</p>
                     <button class="btnStandart cardBtn" type="submit"
                     [routerLink]="['navigator']"
                     [queryParams]="{ tab: '2' }">
@@ -59,8 +59,8 @@
                     </button>
                 </li>
                 <li class="cardItem">
-                    <h3 class="cardTitle">123</h3>
-                    <p class="cardDescription">Income</p>
+                    <h3 class="cardTitle">{{countinvestmentUserType}}</h3>
+                    <p class="cardDescription">Investment</p>
                     <button class="btnStandart cardBtn" type="submit"
                     [routerLink]="['navigator']"
                     [queryParams]="{ tab: '3' }">

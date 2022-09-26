@@ -1,5 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-import { ObservableLike } from 'rxjs';
 
 import { OverviewCashService } from '../OverviewCashViewModel/OverviewCashService';
 
@@ -17,7 +16,6 @@ import { OverviewCashInvestmentUser } from '../OverviewCashViewModel/OverviewCas
 export class OverviewCashComponent implements OnInit {
     data: any;
 
-    userType = 'outcome';
     urlParams = window.location.search;
     urlParamsDate: any;
 
@@ -28,8 +26,6 @@ export class OverviewCashComponent implements OnInit {
 
 
     constructor(private httpService: OverviewCashService) {}
-
-    ngOnChanges() {}
 
     ngOnInit() {
         this.httpService.getData().subscribe((data: any) => {
