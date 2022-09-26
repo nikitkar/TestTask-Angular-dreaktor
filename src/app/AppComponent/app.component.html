@@ -8,7 +8,11 @@
                         With supporting text below as a natural lead-in to
                         additional content.
                     </p>
-                    <button class="btnStandart btnMain" type="submit">
+                    <button
+                        class="btnStandart btnMain"
+                        type="submit"
+                        routerLink="/navigator"
+                    >
                         See transactions
                     </button>
                 </div>
@@ -23,14 +27,24 @@
                 <li class="cardItem">
                     <h3 class="cardTitle">123</h3>
                     <p class="cardDescription">Income</p>
-                    <button class="btnStandart cardBtn" type="submit">
+                    <button
+                        class="btnStandart cardBtn"
+                        type="submit"
+                        [routerLink]="['navigator']"
+                        [queryParams]="{ tab: '0' }"
+                    >
                         See all
                     </button>
                 </li>
                 <li class="cardItem">
                     <h3 class="cardTitle">123</h3>
                     <p class="cardDescription">Income</p>
-                    <button class="btnStandart cardBtn" type="submit">
+                    <button
+                        class="btnStandart cardBtn"
+                        type="submit"
+                        [routerLink]="['navigator']"
+                        [queryParams]="{ tab: '1' }"
+                    >
                         See all
                     </button>
                 </li>

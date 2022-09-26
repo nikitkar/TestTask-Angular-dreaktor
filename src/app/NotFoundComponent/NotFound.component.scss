@@ -1,0 +1,13 @@
+@import "../../styles.scss";
+
+.notFoundMain{
+    padding: 20px 0;
+    &Title{
+        @include font(var(--SizeText__MediunSubtitle), 700);
+
+        margin-bottom: 20px;
+
+        width: 100%;
+        text-align: center;
+    }
+}
