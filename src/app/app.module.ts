@@ -1,6 +1,7 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { RouterModule, Routes } from '@angular/router';
+import { HttpClientModule }   from '@angular/common/http';
 
 import { NavigatePathComponent } from './NavigateProjectComponent/navigatePath.component';
 import { AppComponent } from './AppComponent/app.component';
@@ -14,8 +15,8 @@ const routes: Routes = [
 ];
 
 @NgModule({
-    declarations: [AppComponent, OverviewCashComponent, NotFoundComponent, NavigatePathComponent],
-    imports: [BrowserModule, RouterModule.forRoot(routes)],
+    declarations: [AppComponent, OverviewCashComponent, NotFoundComponent, NavigatePathComponent,],
+    imports: [BrowserModule, RouterModule.forRoot(routes), HttpClientModule],
     providers: [],
     bootstrap: [NavigatePathComponent],
 })

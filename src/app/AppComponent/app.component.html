@@ -11,7 +11,8 @@
                     <button
                         class="btnStandart btnMain"
                         type="submit"
-                        routerLink="/navigator"
+                        [routerLink]="['navigator']"
+                        [queryParams]="{ tab: '0' }"
                     >
                         See transactions
                     </button>
@@ -51,14 +52,18 @@
                 <li class="cardItem">
                     <h3 class="cardTitle">123</h3>
                     <p class="cardDescription">Income</p>
-                    <button class="btnStandart cardBtn" type="submit">
+                    <button class="btnStandart cardBtn" type="submit"
+                    [routerLink]="['navigator']"
+                    [queryParams]="{ tab: '2' }">
                         See all
                     </button>
                 </li>
                 <li class="cardItem">
                     <h3 class="cardTitle">123</h3>
                     <p class="cardDescription">Income</p>
-                    <button class="btnStandart cardBtn" type="submit">
+                    <button class="btnStandart cardBtn" type="submit"
+                    [routerLink]="['navigator']"
+                    [queryParams]="{ tab: '3' }">
                         See all
                     </button>
                 </li>

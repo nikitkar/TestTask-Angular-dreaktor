@@ -52,27 +52,67 @@
                 <table class="navigatorPageTable Table">
                     <thead class="TableHead">
                         <tr class="TableHeadTr">
-                            <th class="TableHeadTh" >Name</th>
+                            <th class="TableHeadTh">Name</th>
                             <th class="TableHeadTh">Acount</th>
                         </tr>
                     </thead>
-                    <tbody class="TableBody">
-                        <tr class="TableBodyTr">
-                            <td class="TableBodyTd">Mark Otto</td>
-                            <td class="TableBodyTd">12</td>
-                        </tr>
-                        <tr class="TableBodyTr">
-                            <td class="TableBodyTd">Jacod Throton</td>
-                            <td class="TableBodyTd">21</td>
-                        </tr>
-                        <tr class="TableBodyTr">
-                            <td class="TableBodyTd">Michail Timoch</td>
-                            <td class="TableBodyTd">98999999</td>
-                        </tr>
-                        <tr class="TableBodyTr">
-                            <td class="TableBodyTd">Nikita Karatheviasd</td>
-                            <td class="TableBodyTd">9899999912</td>
-                        </tr>
+                    <tbody class="TableBody" [ngSwitch]="urlParamsDate[1]">
+                        <ng-template ngSwitchCase="tab=0">
+                            <tr
+                                class="TableBodyTr"
+                                *ngFor="let user of incomeUserType"
+                            >
+                                <td class="TableBodyTd">
+                                    {{ user.name.first }}
+                                    {{ user.name.last }}
+                                </td>
+                                <td class="TableBodyTd">
+                                    {{ user.amount }}
+                                </td>
+                            </tr>
+                        </ng-template>
+                        <ng-template ngSwitchCase="tab=1">
+                            <tr
+                                class="TableBodyTr"
+                                *ngFor="let user of outcomeUserType"
+                            >
+                                <td class="TableBodyTd">
+                                    {{ user.name.first }}
+                                    {{ user.name.last }}
+                                </td>
+                                <td class="TableBodyTd">
+                                    {{ user.amount }}
+                                </td>
+                            </tr>
+                        </ng-template>
+                        <ng-template ngSwitchCase="tab=2">
+                            <tr
+                                class="TableBodyTr"
+                                *ngFor="let user of loanUserType"
+                            >
+                                <td class="TableBodyTd">
+                                    {{ user.name.first }}
+                                    {{ user.name.last }}
+                                </td>
+                                <td class="TableBodyTd">
+                                    {{ user.amount }}
+                                </td>
+                            </tr>
+                        </ng-template>
+                        <ng-template ngSwitchCase="tab=3">
+                            <tr
+                                class="TableBodyTr"
+                                *ngFor="let user of investmentUserType"
+                            >
+                                <td class="TableBodyTd">
+                                    {{ user.name.first }}
+                                    {{ user.name.last }}
+                                </td>
+                                <td class="TableBodyTd">
+                                    {{ user.amount }}
+                                </td>
+                            </tr>
+                        </ng-template>
                     </tbody>
                 </table>
             </div>
